@@ -5,6 +5,7 @@
  * @str: input
  * Return: void
  */
+
 int _strlen(char *str)
 {
 	int i;
@@ -24,6 +25,7 @@ int _strlen(char *str)
  * @count: input
  * Return: void
  */
+
 void convertToRot13(char *str, int *count)
 {
 	int i, j;
@@ -44,7 +46,7 @@ void convertToRot13(char *str, int *count)
 			(*count)++;
 		}
 		else
-			_putchar(str[i]);
+		_putchar(str[i]);
 		(*count)++;
 	}
 }
