@@ -27,7 +27,7 @@ int _strlen(char *str)
 
 void convertToRot13(char *str, int *count)
 {
-	int i, j;
+	int i;
 	int len;
 
 	len = _strlen(str);
