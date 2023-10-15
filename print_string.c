@@ -10,7 +10,7 @@
 void print_string(char *str, int *count)
 {
 	if (str == NULL)
-		str = "";
+		str = "(null)";
 	while (*str != '\0')
 	{
 		_putchar(*str);
