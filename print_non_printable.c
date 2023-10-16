@@ -48,4 +48,11 @@ void print_non_printable(char *str, int *count)
 		str++;
 		(*count)++;
 	}
+	str++;
+	if ((*str >= 65 && *str <= 90) || (*str >= 97 && *str <= 122))
+	{
+		_putchar('\\');
+		_putchar('0');
+		print_non_printable(str, count);
+	}
 }

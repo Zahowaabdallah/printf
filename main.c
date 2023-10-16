@@ -2,6 +2,6 @@
 
 int main()
 {
-	_printf("%S\n", "Best\1School");
+	_printf("%S\n", "Best\0School");
 	return (0);
 }
