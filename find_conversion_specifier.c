@@ -33,5 +33,8 @@ void find_conversion_specifier(char format, va_list list, int *count)
 		case 'r':
 			print_reverse_string(va_arg(list, char*), count);
 			break;
+		case 'b':
+			print_binary(va_arg(list, int), count);
+			break;
 	}
 }
