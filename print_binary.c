@@ -1,28 +1,23 @@
 #include "main.h"
 /**
- * print_binary - prints the binary number equivalent for integer numbers
- * @number: input
- * @count: input
+ * print_positive_binary - prints the binary representation of a positive number
+ * @number: the positive number to print
+ * @count: a pointer to the count of printed characters
  * Return: void
  */
-void print_binary(int number, int *count)
+void print_positive_binary(int number, int *count)
 {
-	int max;
-	int temp;
-
+	int temp = 1;
 	max = 1;
+
 	if (number == 0)
 	{
-		_putchar(48);
+		_putchar(0);
 		(*count)++;
 		return;
 	}
 	if (number < 0)
 	{
-		_putchar(49);
-		(*count)++;
-		number = -number;
-	}
 	while (max <= number)
 	{
 		max = max * 2;
@@ -30,21 +25,40 @@ void print_binary(int number, int *count)
 	max = max / 2;
 	temp = max;
 
-
 	while (max > 0)
 	{
 		if (temp <= number)
 		{
-			_putchar(49);
+			_putchar(1);
 			number = number - temp;
 			(*count)++;
 		}
 		else
 		{
-			_putchar(48);
+			_putchar(0);
 			(*count)++;
 		}
 		max = max / 2;
 		temp = temp / 2;
 	}
+}
+
+/**
+ * print_binary - print the binary representation of a number
+ * @number: the number to print
+ * @count: a pointer to the count of printed characters
+ */
+void print_binary(int number, int *count)
+{
+	int i;
+	if (number < 0)
+	{
+		number = -number;
+		for (i = 0; i < 24; i++)
+		{
+			_putchar('1');
+			(*count)++;
+		}
+	}
+	print_positive_binary(number, count);
 }
