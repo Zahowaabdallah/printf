@@ -36,5 +36,8 @@ void find_conversion_specifier(char format, va_list list, int *count)
 		case 'b':
 			print_binary(va_arg(list, int), count);
 			break;
+		case 'S':
+			print_non_printable(va_arg(list, char*), count);
+			break;
 	}
 }
