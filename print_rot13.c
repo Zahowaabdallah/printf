@@ -1,24 +1,6 @@
 #include "main.h"
 
 /**
- * _strlen - function
- * @str: input
- * Return: int
- */
-int _strlen(char *str)
-{
-	int i;
-
-	i = 0;
-
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
-
-/**
  * convertToRot13 - function
  * @str: input
  * @count: input
