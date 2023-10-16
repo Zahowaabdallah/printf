@@ -11,5 +11,6 @@ void print_char(char ch, int *count);
 void print_string(char *str, int *count);
 void print_integer(long int number, int *count);
 void convertToRot13(char *str, int *count);
+void print_reverse_string(char *str, int *count);
 
 #endif
