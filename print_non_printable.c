@@ -41,6 +41,7 @@ void print_non_printable(char *str, int *count)
 		{
 			_putchar('\\');
 			_putchar('x');
+			(*count) += 2;
 			hexa(*str);
 			str++;
 		}
@@ -49,10 +50,13 @@ void print_non_printable(char *str, int *count)
 		(*count)++;
 	}
 	str++;
-	if ((*str >= 65 && *str <= 90) || (*str >= 97 && *str <= 122))
+	if((*str >= 65 && *str <= 90) || (*str >= 97 && *str <= 122))
 	{
-		_putchar('\\');
+        	_putchar('\\');
+        	_putchar('x');
 		_putchar('0');
+		_putchar('0');
+		(*count) += 4;
 		print_non_printable(str, count);
 	}
 }
