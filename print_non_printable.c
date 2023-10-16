@@ -36,7 +36,7 @@ void print_non_printable(char *str, int *count)
 		str = "(null)";
 	while (*str != '\0')
 	{
-		if (*str <= 32 || *str > 126)
+		if (*str < 32 || *str > 126)
 		{
 			_putchar('\\');
 			_putchar('x');
