@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <unistd.h>
 
+int _printf(const char *format, ...);
 int _putchar(char ch);
 int _strlen(char *str);
 void print_char(char ch, int *count);
