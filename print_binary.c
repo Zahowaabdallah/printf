@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_positive_binary - prints the binary representation of a positive number
+ * print_positive_binary - print the binary representation of a positive number
  * @number: the positive number to print
  * @count: a pointer to the count of printed characters
  * Return: void
@@ -8,7 +8,7 @@
 void print_positive_binary(int number, int *count)
 {
 	int temp = 1;
-	max = 1;
+	int max = 1;
 
 	if (number == 0)
 	{
@@ -42,7 +42,7 @@ void print_positive_binary(int number, int *count)
 		temp = temp / 2;
 	}
 }
-
+}
 /**
  * print_binary - print the binary representation of a number
  * @number: the number to print
@@ -51,6 +51,7 @@ void print_positive_binary(int number, int *count)
 void print_binary(int number, int *count)
 {
 	int i;
+
 	if (number < 0)
 	{
 		number = -number;
