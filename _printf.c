@@ -8,35 +8,22 @@
 
 int _printf(const char *format, ...)
 {
-	int i, count;
+	int i;
+	int count;
 	va_list list;
 
 	i = 0, count = 0;
 	va_start(list, format);
+
+	if (format == NULL)
+		return (-1);
+
 	while (format != NULL && format[i] != '\0')
 	{
 		if (format[i] == '%' && format[i + 1] != '\0')
 		{
 			i++;
-			switch (format[i])
-			{
-				case 'c':
-					print_char(va_arg(list, int), &count);
-					break;
-				case 's':
-					print_string(va_arg(list, char*), &count);
-					break;
-				case '%':
-					print_char('%', &count);
-					break;
-				case 'd':
-				case 'i':
-					print_integer(va_arg(list, int), &count);
-					break;
-				case 'R':
-					convertToRot13(va_arg(list, char*), &count);
-					break;
-			}
+			find_conversion_specifier(format[i], list, &count);
 		}
 		else
 		{
