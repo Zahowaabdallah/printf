@@ -18,6 +18,7 @@ void hexa(int a)
 	}
 	else
 	{
+		_putchar(48);
 		_putchar((a % 16) + 48);
 	}
 }
