@@ -34,10 +34,22 @@ void find_conversion_specifier(char format, va_list list, int *count)
 			print_reverse_string(va_arg(list, char*), count);
 			break;
 		case 'b':
-			print_binary(va_arg(list, int), count);
+			print_binary(va_arg(list, unsigned int), count);
 			break;
 		case 'S':
 			print_non_printable(va_arg(list, char*), count);
+			break;
+		case 'u':
+			print_unsigned_int(va_arg(list, unsigned int), count);
+			break;
+		case 'o':
+			print_octal(va_arg(list, unsigned int), count);
+			break;
+		case 'x':
+			print_lower_hexa(va_arg(list, unsigned int), count);
+			break;
+		case 'X':
+			print_upper_hexa(va_arg(list, unsigned int), count);
 			break;
 	}
 }

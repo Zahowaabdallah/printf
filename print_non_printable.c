@@ -4,10 +4,11 @@
  * hexa - converts an int
  * to hexadecimal
  * @a: input
+ * @count: input
  * Return: void
  */
 
-void hexa(int a)
+void hexa(int a, int *count)
 {
 	if ((a / 16) > 0)
 		hexa(a / 16);
@@ -15,11 +16,13 @@ void hexa(int a)
 	{
 		_putchar(48);
 		_putchar(((a % 16) + 55));
+		(*count) += 2;
 	}
 	else
 	{
 		_putchar(48);
 		_putchar((a % 16) + 48);
+		(*count) += 2;
 	}
 }
 
@@ -42,7 +45,7 @@ void print_non_printable(char *str, int *count)
 			_putchar('\\');
 			_putchar('x');
 			(*count) += 2;
-			hexa(*str);
+			hexa(*str, count);
 		}
 		_putchar(*str);
 		str++;
