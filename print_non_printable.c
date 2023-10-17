@@ -33,30 +33,19 @@ void hexa(int a)
 
 void print_non_printable(char *str, int *count)
 {
-	if (str == NULL)
-		str = "(null)";
-	while (*str != '\0')
-	{
-		if (*str < 32 || *str > 126)
-		{
-			_putchar('\\');
-			_putchar('x');
-			(*count) += 2;
-			hexa(*str);
-			str++;
-		}
-		_putchar(*str);
-		str++;
-		(*count)++;
-	}
-	str++;
-	if((*str >= 65 && *str <= 90) || (*str >= 97 && *str <= 122))
-	{
-        	_putchar('\\');
-        	_putchar('x');
-		_putchar('0');
-		_putchar('0');
-		(*count) += 4;
-		print_non_printable(str, count);
+        if (str == NULL)
+                str = "(null)";
+        while (*str != '\0')
+        {
+                if (*str < 32 || *str > 126)
+                {
+                        _putchar('\\');
+                        _putchar('x');
+                        (*count) += 2;
+                        hexa(*str);
+                }
+                _putchar(*str);
+                str++;
+                (*count)++;
 	}
 }
