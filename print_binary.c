@@ -48,7 +48,7 @@ void print_positive_binary(int number, int *count)
  * @number: the number to print
  * @count: a pointer to the count of printed characters
  */
-void print_binary(int number, int *count)
+void print_binary(unsigned int number, int *count)
 {
 	int i;
 
