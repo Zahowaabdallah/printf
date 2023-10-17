@@ -50,16 +50,5 @@ void print_positive_binary(int number, int *count)
  */
 void print_binary(unsigned int number, int *count)
 {
-	int i;
-
-	if (number < 0)
-	{
-		number = -number;
-		for (i = 0; i < 24; i++)
-		{
-			_putchar('1');
-			(*count)++;
-		}
-	}
 	print_positive_binary(number, count);
 }
