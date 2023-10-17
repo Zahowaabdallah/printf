@@ -10,7 +10,7 @@
 void print_upper_hexa(unsigned int number, int *count)
 {
 	if ((number / 16) > 0)
-		hexa(number / 16);
+		print_upper_hexa((number / 16), count);
 	if ((number % 16) >= 10 && (number % 16) <= 15)
 	{
 		_putchar(((number % 16) + 55));

@@ -11,7 +11,7 @@
 void hexa(int a, int *count)
 {
 	if ((a / 16) > 0)
-		hexa(a / 16);
+		hexa((a / 16), count);
 	if ((a % 16) >= 10 && (a % 16) <= 15)
 	{
 		_putchar(48);
