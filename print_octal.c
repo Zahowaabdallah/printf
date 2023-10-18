@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_lower_hexa - function
+ * print_octal - function
  * @number: input
  * @count: input
  * Return: void

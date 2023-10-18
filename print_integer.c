@@ -40,13 +40,14 @@ void print_integer(long int num, int *count)
 	NegativeToPositive(&num, &i, &isNegative);
 	copy = num;
 	copy2 = num;
-	/*how many digits in a number */
 	while (copy / 10 != 0)
 	{
 		i++;
 		copy = copy / 10;
 	}
 	str = malloc((sizeof(char) * i) + 1);
+	if (str == NULL)
+		return;
 	j = i;
 	str[j] = '\0';
 	j = i - 1;
