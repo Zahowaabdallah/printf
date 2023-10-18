@@ -26,6 +26,8 @@ void print_unsigned_int(unsigned int number, int *count)
 		copy = copy / 10;
 	}
 	str = malloc((sizeof(char) * i) + 1);
+	if (str == NULL)
+		return;
 	j = i;
 	str[j] = '\0';
 	j = i - 1;
