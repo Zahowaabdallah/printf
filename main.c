@@ -2,6 +2,6 @@
 
 int main()
 {
-	_printf("%b", 4294968319);
+	_printf("%x", 32765);
 	return (0);
 }

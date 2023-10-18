@@ -1,6 +1,29 @@
 #include "main.h"
 
 /**
+ * call_another_function - handles
+ * the differnet cases of format specifiers
+ * in an organized manner
+ * @format: input
+ * @list: list of arguments
+ * @count: num of chars printed
+ * Return: void
+ */
+
+void call_another_function(char format, va_list list, int *count)
+{
+	switch (format)
+	{
+		case 'X':
+			print_upper_hexa(va_arg(list, unsigned int), count);
+			break;
+		case 'p':
+			print_address(va_arg(list, void*), count);
+			break;
+	}
+}
+
+/**
  * find_conversion_specifier - handles
  * the differnet cases of format specifiers
  * in an organized manner
@@ -48,8 +71,6 @@ void find_conversion_specifier(char format, va_list list, int *count)
 		case 'x':
 			print_lower_hexa(va_arg(list, unsigned int), count);
 			break;
-		case 'X':
-			print_upper_hexa(va_arg(list, unsigned int), count);
-			break;
 	}
+	call_another_function(format, list, count);
 }

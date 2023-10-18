@@ -21,5 +21,4 @@ void print_octal(unsigned int number, int *count);
 void print_lower_hexa(unsigned int number, int *count);
 void print_upper_hexa(unsigned int number, int *count);
 
-
 #endif
