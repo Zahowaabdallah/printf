@@ -2,8 +2,6 @@
 
 #define bit32_range (4294967296)
 
-void print_binary(long long int number, int *count);
-
 /**
  * print_positive_binary - print the binary representation of a positive number
  * @number: the positive number to print
