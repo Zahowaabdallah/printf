@@ -7,7 +7,7 @@
  * Return: void
  */
 
-void print_lower_hexa(unsigned long int number, int *count)
+void print_lower_hexa(unsigned int number, int *count)
 {
 	if ((number / 16) > 0)
 		print_lower_hexa((number / 16), count);
