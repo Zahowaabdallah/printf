@@ -1,20 +1,17 @@
-#include <stdio.h>
+#include "main.h"
 
-void print_address(unsigned long int number, int *count);
+/**
+ * print_address - prints the address in
+ * memory for variables from
+ * any data type
+ * @address: void pointer to the address
+ * @count: number of characters printed
+ * Return: void
+ */
 
-void myf(void *str)
+void print_address(void *address, int *count)
 {
-        int c;
-        unsigned long int st = (unsigned long int) str;
-        print_lower_hexa(st, &c);
-
-}
-
-int main()
-{
-        int a;
-        myf(&a);
-        printf("\n");
-        printf("%p", &a);
-        return (0);
+	_putchar('0');
+	_putchar('x');
+	print_lower_hexa((unsigned long int) address, count);
 }

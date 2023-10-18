@@ -18,8 +18,8 @@ void print_binary(long int number, int *count);
 void print_non_printable(char *str, int *count);
 void print_unsigned_int(unsigned int number, int *count);
 void print_octal(unsigned int number, int *count);
-void print_lower_hexa(unsigned int number, int *count);
+void print_lower_hexa(unsigned long int number, int *count);
 void print_upper_hexa(unsigned int number, int *count);
-void print_address(void *address);
+void print_address(void *address, int *count);
 
 #endif

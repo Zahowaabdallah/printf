@@ -20,6 +20,10 @@ void call_another_function(char format, va_list list, int *count)
 		case 'p':
 			print_address(va_arg(list, void*), count);
 			break;
+		default:
+			_putchar(format);
+			(*count)++;
+			break;
 	}
 }
 
