@@ -17,13 +17,6 @@ void call_another_function(char format, va_list list, int *count)
 		case 'X':
 			print_upper_hexa(va_arg(list, unsigned int), count);
 			break;
-		case 'p':
-			print_address(va_arg(list, void*), count);
-			break;
-		default:
-			_putchar(format);
-			(*count)++;
-			break;
 	}
 }
 
