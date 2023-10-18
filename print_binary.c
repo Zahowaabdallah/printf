@@ -18,12 +18,10 @@ void print_positive_binary(long int number, int *count)
 
 	if (number == 0)
 	{
-		_putchar(0);
+		_putchar('0');
 		(*count)++;
 		return;
 	}
-	if (number < 0)
-	{
 	while (max <= number)
 	{
 		max = max * 2;
@@ -35,19 +33,18 @@ void print_positive_binary(long int number, int *count)
 	{
 		if (temp <= number)
 		{
-			_putchar(1);
+			_putchar('1');
 			number = number - temp;
 			(*count)++;
 		}
 		else
 		{
-			_putchar(0);
+			_putchar('0');
 			(*count)++;
 		}
 		max = max / 2;
 		temp = temp / 2;
 	}
-}
 }
 
 /**
