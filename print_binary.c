@@ -2,8 +2,11 @@
 
 #define bit32_range (4294967296)
 
+<<<<<<< HEAD
+=======
 void print_binary(long int number, int *count);
 
+>>>>>>> 2250676fc5493c0048bdc5451cafb8030d77e21b
 /**
  * print_positive_binary - print the binary representation of a positive number
  * @number: the positive number to print
