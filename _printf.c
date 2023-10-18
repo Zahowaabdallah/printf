@@ -20,13 +20,7 @@ int _printf(const char *format, ...)
 
 	while (format != NULL && format[i] != '\0')
 	{
-		if (format[i] == '%' && format[i + 1] == '\0')
-		{
-			_putchar('%');
-			count++;
-			return (1);
-		}
-		else if (format[i] == '%' && format[i + 1] != '\0')
+		if (format[i] == '%' && format[i + 1] != '\0')
 		{
 			i++;
 			find_conversion_specifier(format[i], list, &count);
